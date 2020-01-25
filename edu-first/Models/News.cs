@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace edu_first.Models
 {
-    public class New
+    public class News
     {
         public int Id { get; set; }
         public string NewsDetails { get; set; }
