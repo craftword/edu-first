@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+;
 
 namespace edu_first.Models
 {
-    public class User : IdentityUser
+    public class Role
     {
+        [Required]
+        public string RoleName { get; set; }
 
     }
 }
