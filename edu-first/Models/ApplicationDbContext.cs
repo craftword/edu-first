@@ -12,9 +12,9 @@ namespace edu_first.Models
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
+            Database.Migrate();
         }
 
-
+        public virtual DbSet<> {get; set;};
     } 
 }
