@@ -13,5 +13,7 @@ namespace edu_first.Models
         public int Exam { get; set; }
         public int Total { get; set; }
         public char Grade { get; set; }
+        public virtual  ICollection<Registration> Registrations { get; set; }
+
     }
 }
