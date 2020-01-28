@@ -11,7 +11,7 @@ namespace edu_first.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RegistratioId { get; set; }
+        public int RegistrationId { get; set; }
         
         [Required]
         public int UserId { get; set; }
