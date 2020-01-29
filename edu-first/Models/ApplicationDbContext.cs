@@ -24,7 +24,7 @@ namespace edu_first.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Seed();
         }
     } 
 
