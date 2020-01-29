@@ -13,16 +13,9 @@ namespace edu_first.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RegistrationId { get; set; }
         
-        [Required]
-        public int UserId { get; set; }
-
-        [Required]
-        public int SessionId { get; set; }
-
-        [Required]
-        public int CourseId { get; set; }
         public User User { get; set; }
         public Session Session { get; set; }
         public Course Course { get; set; }
+        public virtual ICollection<Score> Scores { get; set; }
     }
 }

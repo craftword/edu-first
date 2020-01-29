@@ -13,6 +13,7 @@ namespace edu_first.Models
             : base(options)
         {
             Database.Migrate();
+
         }
 
         public virtual DbSet<Registration> Registrations { get; set; }
@@ -24,7 +25,8 @@ namespace edu_first.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Seed();
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Seed();
         }
     } 
 

@@ -11,7 +11,7 @@ namespace edu_first.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int SessionId { get; set; }
 
         [Required]
         [StringLength(10,ErrorMessage ="Session must be between 4 and 10 characters", MinimumLength =4)]
