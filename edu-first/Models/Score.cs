@@ -29,7 +29,7 @@ namespace edu_first.Models
         public int Total { get; set; }
 
         public char Grade { get; set; }
-        public virtual  ICollection<Registration> Registrations { get; set; }
+        public Registration Registration { get; set; }
 
     }
 }

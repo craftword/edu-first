@@ -15,6 +15,10 @@ namespace edu_first.Models
         public string ImagePath { get; set; }
 
         [Required]
+        [MaxLength(50, ErrorMessage ="Description cannot be more than 50 characters")]
+        public string Description { get; set; }
+
+        [Required]
         public string Category { get; set; }
         public User User { get; set; }
 

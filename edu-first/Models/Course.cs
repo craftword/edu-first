@@ -11,7 +11,7 @@ namespace edu_first.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int CourseId { get; set; }
 
         [Required]
         [MaxLength(50, ErrorMessage ="Course title cannot be more than 50 characters")]

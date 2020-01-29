@@ -20,9 +20,10 @@ namespace edu_first.Models
         [Required]
         [MaxLength(50, ErrorMessage ="News title cannot be more than 50 characters")]
         public string NewsTitle { get; set; }
+        public string ImagePath { get; set; }
 
         [Required]
-        public string AddedBy { get; set; }
+        public int AddedBy { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -13,8 +13,22 @@ namespace edu_first.Models
             : base(options)
         {
             Database.Migrate();
+
         }
 
-        public virtual DbSet<> {get; set;};
+        public virtual DbSet<Registration> Registrations { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Session> Sessions { get; set; }
+        public virtual DbSet<Score> Scores { get; set; }
+        public virtual DbSet<News> NewsDetails { get; set; }
+        public virtual DbSet<Gallery> Galleries { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Seed();
+        }
     } 
+
+   
 }

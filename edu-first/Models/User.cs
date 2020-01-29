@@ -10,8 +10,6 @@ namespace edu_first.Models
 {
     public class User : IdentityUser
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
         [Required]
         [MaxLength(15, ErrorMessage ="First name cannot be more than 15 characters")]
