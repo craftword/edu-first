@@ -16,6 +16,7 @@ namespace edu_first.Models
 
         }
 
+        // DbSets
         public virtual DbSet<Registration> Registrations { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Session> Sessions { get; set; }
