@@ -245,4 +245,4 @@ paket-files/
 *.sln.iml
 
 
-appsettings.json
+/edu-first/appsettings.json
