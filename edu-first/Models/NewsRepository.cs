@@ -13,14 +13,14 @@ namespace edu_first.Models
         {
             this.context = context;
         }
-        public News AddCourse(News newsDetails)
+        public News AddNews(News newsDetails)
         {
             context.NewsDetails.Add(newsDetails);
             context.SaveChanges();
             return newsDetails;
         }
 
-        public News DeleteCourse(int id)
+        public News DeleteNews(int id)
         {
             News newDetail =  context.NewsDetails.Find(id);
             if(newDetail != null)
@@ -31,17 +31,17 @@ namespace edu_first.Models
             return newDetail;
         }
 
-        public IEnumerable<News> fetchAllCourses()
+        public IEnumerable<News> fetchAllNews()
         {
             return context.NewsDetails;
         }
 
-        public News fetchCourse(int id)
+        public News fetchNews(int id)
         {
             return context.NewsDetails.Find(id);
         }
 
-        public News UpdateCourse(News newsChanges)
+        public News UpdateNews(News newsChanges)
         {
             var newsDetail = context.NewsDetails.Attach(newsChanges);
             newsDetail.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
