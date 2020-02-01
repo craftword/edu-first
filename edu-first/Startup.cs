@@ -25,6 +25,7 @@ namespace edu_first
         {
             services.AddMvc();
             services.AddDbContextPool<ApplicationDbContext>(Options => Options.UseSqlServer(_config.GetConnectionString("DbConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +36,14 @@ namespace edu_first
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                   name: "default",
+                   template: "{controller}/{action}/{id?}");
+
+            });
 
             app.Run(async (context) =>
             {
