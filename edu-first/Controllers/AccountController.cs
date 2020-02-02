@@ -27,6 +27,11 @@ namespace edu_first.Controllers
 
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -100,6 +105,16 @@ namespace edu_first.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        // POST: /Account/LogOff
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LogOff()
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation(4, "User logged out.");
+            return RedirectToAction("Index", "Account");
         }
 
 
