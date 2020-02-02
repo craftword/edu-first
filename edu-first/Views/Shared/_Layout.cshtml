@@ -1,4 +1,4 @@
-﻿@inject SignInManager<Models.User> signInManager;
+﻿@inject SignInManager<Models.Users> signInManager;
 
 
 <!DOCTYPE html>
@@ -17,7 +17,8 @@
                     LogOut @User.Identity.Name
                 </button>
             </form>
-        } else
+        }
+        else
         {
             <a asp-controller="Account" asp-action="Register">Register</a> <a asp-controller="Account" asp-action="Login">Login</a>
         }

@@ -20,7 +20,7 @@ namespace edu_first.Models
 
         [Required]
         public string Category { get; set; }
-        public User User { get; set; }
+        public Users User { get; set; }
 
     }
 }

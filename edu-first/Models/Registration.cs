@@ -13,7 +13,7 @@ namespace edu_first.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RegistrationId { get; set; }
         
-        public User User { get; set; }
+        public Users User { get; set; }
         public Session Session { get; set; }
         public Course Course { get; set; }
         public virtual ICollection<Score> Scores { get; set; }
