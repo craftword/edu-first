@@ -1,0 +1,52 @@
+﻿@model Course;
+@inject ICourseRepository courses
+
+@{
+    ViewBag.Title = "Courses | Edu First Academy";
+    int counter = 0;
+}
+
+
+<div class="frmAdd">
+<form asp-controller="Course" asp-action="Index" method="post" class="mt-5 container">
+    <h3><p>ADD COURSE</p></h3>
+    <div class="form-group row">
+        <label asp-for="Title" class="col-sm-1 col-form-label"><b>Title</b> </label>
+        <div class="col-sm-10">
+            <input asp-for="Title" class="form-control" placeholder="Enter Course Title" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+    
+    <div>
+        <label class="col-sm-1 col-form-label"></label>
+        <button type="submit" class="btn btn-primary text-uppercase">ADD</button>
+    </div>
+</form>
+</div>
+<div class="frmEdit">
+
+</div>
+
+
+<div class="container mt-5">
+    <table class="table table-hover table-striped table-bordered table-borderless">
+        <thead>
+            <tr>
+                <td><b>Serial Number</b></td>
+                <td><b>Course Title</b></td>
+                <td><b>Manage Record</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var course in courses.fetchAllCourses()){
+                counter += 1;
+            <tr>
+                <td>@counter</td>
+                <td>@course.Title</td>
+                <td>Edit &nbsp; | &nbsp; Delete</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
