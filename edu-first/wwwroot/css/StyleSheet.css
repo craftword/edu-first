@@ -27,6 +27,8 @@
 
 .sep{
     color:#ddd;
+    display:inline-block;
+    width:30%;
 }
 
 .table-top-bar {

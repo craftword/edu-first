@@ -37,7 +37,10 @@ namespace edu_first
             }
 
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(route =>
+            {
+                route.MapRoute("default", "{controller=Home}/{action=Index}/{Id?}");
+            });
 
             app.Run(async (context) =>
             {

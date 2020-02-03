@@ -32,5 +32,11 @@ namespace edu_first.Controllers
             }
             return View();
         }
+
+        public IActionResult CourseEdit(int id)
+        {
+            var course = courseRepository.fetchCourse(id);
+            return View(course);
+        }
     }
 }
