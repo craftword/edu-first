@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace edu_first.Models
 {
-    interface ICourseRepository
+    public interface ICourseRepository
     {
         Course AddCourse(Course course);
         Course UpdateCourse(Course courseChanges);

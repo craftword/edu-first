@@ -1,0 +1,39 @@
+﻿.frmAdd, .frmEdit {
+    height: 250px;
+    opacity: 1;
+    transition: opacity, 5s linear;
+    position: absolute;
+    width: 100%;
+    background: blue;
+}
+.frmAdd p, .frmEdit p {
+    font-weight:bold;
+}
+
+.frmAdd {
+    z-index: 120;
+}
+.frmEdit {
+    z-index: 20;
+}
+
+.frm-container {
+    position: relative;
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: height, .2s linear;
+}
+
+.sep{
+    color:#ddd;
+}
+
+.table-top-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-btn, .del-btn{
+    color:#aaa;
+}

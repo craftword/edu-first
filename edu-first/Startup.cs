@@ -26,11 +26,12 @@ namespace edu_first
         {
             services.AddMvc();
             services.AddDbContextPool<ApplicationDbContext>(Options => Options.UseSqlServer(_config.GetConnectionString("DbConnection")));
-            
-
-            services.AddIdentity<Users, IdentityRole>()
+        
+             services.AddIdentity<Users, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
+          
+            services.AddScoped<ICourseRepository, CourseRepository>();
 
         }
 
@@ -47,9 +48,10 @@ namespace edu_first
             {
                 routes.MapRoute(
                    name: "default",
-                   template: "{controller}/{action}/{id?}");
+                   template: "{controller=Home}/{action=Index}/{id?}");
 
-            });
+            });            
+
 
             app.Run(async (context) =>
             {
