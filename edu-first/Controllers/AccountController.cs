@@ -13,7 +13,7 @@ namespace edu_first.Controllers
 {
     public class AccountController : Controller
     {
-
+        
         private readonly UserManager<Users> _userManager;
         private readonly SignInManager<Users> _signInManager;
         private readonly ILogger _logger;
@@ -26,11 +26,7 @@ namespace edu_first.Controllers
             _logger = loggerFactory.CreateLogger<AccountController>();
 
         }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
+                   
 
         [HttpGet]
         public IActionResult Register()
@@ -44,7 +40,9 @@ namespace edu_first.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new Users { UserName = model.Email, Email = model.Email };
+
+                var user = new Users { UserName = model.Email, Email = model.Email };              
+
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
@@ -63,6 +61,7 @@ namespace edu_first.Controllers
 
 
         }
+
 
         [HttpGet]
         public IActionResult Login()
@@ -116,6 +115,7 @@ namespace edu_first.Controllers
             _logger.LogInformation(4, "User logged out.");
             return RedirectToAction("Index", "Account");
         }
+
 
 
     }

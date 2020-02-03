@@ -27,6 +27,7 @@ namespace edu_first
             services.AddMvc();
             services.AddDbContextPool<ApplicationDbContext>(Options => Options.UseSqlServer(_config.GetConnectionString("DbConnection")));
 
+
             services.AddIdentity<Users, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
