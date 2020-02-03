@@ -47,7 +47,7 @@
 
 <div class="container mt-5">
     <div class="table-top-bar">
-        <div class=""></div>
+        <div class=""><h2>List of Courses</h2></div>
         <div class="add-course-btn btn btn-primary mb-3">Add Course</div>
     </div>
     <table class="table table-hover table-striped table-bordered table-borderless">
@@ -55,7 +55,7 @@
             <tr>
                 <td><b>Serial Number</b></td>
                 <td><b>Course Title</b></td>
-                <td><b>Manage Record</b></td>
+                <td><center><b>Manage Record</b></center></td>
             </tr>
         </thead>
         <tbody>
@@ -64,7 +64,13 @@
             <tr>
                 <td>@counter</td>
                 <td>@course.Title</td>
-                <td>Edit &nbsp; | &nbsp; Delete</td>
+                <td>
+                    <center>
+                        <a asp-controller="" asp-action="" asp-route-id="" class="edit-btn"><i class="fa fa-pen"></i></a>
+                        &nbsp; &nbsp; <span class="sep">|</span> &nbsp; &nbsp;
+                        <a asp-controller="" asp-action="" asp-route-id="" class="del-btn"><i class="fa fa-trash-alt"></i></a>
+                    </center>
+                </td>
             </tr>
             }
         </tbody>
