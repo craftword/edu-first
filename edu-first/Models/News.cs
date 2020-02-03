@@ -28,6 +28,6 @@ namespace edu_first.Models
         public DateTime CreatedAt { get; set; }
 
         public string Tag { get; set; }
-        public User User { get; set; }
+        public Users User { get; set; }
     }
 }
