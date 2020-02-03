@@ -62,12 +62,12 @@ namespace edu_first.Controllers
 
         }
 
-
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
+
 
         // POST: /Account/Login
         [HttpPost]
@@ -115,8 +115,5 @@ namespace edu_first.Controllers
             _logger.LogInformation(4, "User logged out.");
             return RedirectToAction("Index", "Account");
         }
-
-
-
     }
 }
