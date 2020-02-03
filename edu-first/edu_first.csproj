@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="wwwroot\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
@@ -37,6 +38,7 @@
     <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.js.map" />
     <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js" />
     <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js.map" />
+
   </ItemGroup>
 
   <ItemGroup>

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace edu_first.Models
 {
-    public class User : IdentityUser
+    public class Users : IdentityUser
     {
 
         [Required]

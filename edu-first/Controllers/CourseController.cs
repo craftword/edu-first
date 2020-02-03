@@ -23,7 +23,7 @@ namespace edu_first.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Course model)
+        public IActionResult Index(Models.Course model)
         {
             if (ModelState.IsValid)
             {

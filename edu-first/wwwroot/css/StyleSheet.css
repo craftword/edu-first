@@ -28,7 +28,7 @@
 .sep{
     color:#ddd;
     display:inline-block;
-    width:30%;
+    width:25%;
 }
 
 .table-top-bar {
@@ -37,5 +37,5 @@
 }
 
 .edit-btn, .del-btn{
-    color:#aaa;
+    color:#eee;
 }
